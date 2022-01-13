@@ -21,16 +21,21 @@ const HeaderItem = styled.li`
 
 const HeaderNavLink = styled(NavLink)`
     color: #222;
+    &.active {
+        color: royalblue;
+        font-size: 16px;
+        transition: 0.5s;
+    }
 `;
 
 class Header extends React.Component {
     render() {
         return <header>
                 <HeaderBox>
-                    <HeaderItem><HeaderNavLink to="/">HOME</HeaderNavLink></HeaderItem>
-                    <HeaderItem><HeaderNavLink to="/intro">INTRO</HeaderNavLink></HeaderItem>
-                    <HeaderItem><HeaderNavLink to="/notice">NOTICE</HeaderNavLink></HeaderItem>
-                    <HeaderItem><HeaderNavLink to="/contact">CONTACT</HeaderNavLink></HeaderItem>
+                    <HeaderItem><HeaderNavLink activeClassName="active" to="/">HOME</HeaderNavLink></HeaderItem>
+                    <HeaderItem><HeaderNavLink activeClassName="active" to="/intro">INTRO</HeaderNavLink></HeaderItem>
+                    <HeaderItem><HeaderNavLink activeClassName="active" to="/notice">NOTICE</HeaderNavLink></HeaderItem>
+                    <HeaderItem><HeaderNavLink activeClassName="active" to="/contact">CONTACT</HeaderNavLink></HeaderItem>
                 </HeaderBox>
         </header>
     };
